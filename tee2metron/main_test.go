@@ -2,15 +2,14 @@ package main_test
 
 import (
 	"fmt"
+	"net"
+	"os/exec"
+	"regexp"
+
+	"github.com/onsi/gomega/gexec"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gbytes"
-	"github.com/onsi/gomega/gexec"
-	"net"
-	"os/exec"
-
-	"regexp"
-	//    "errors""strings"
 )
 
 const maxUpdDatagramSize = 65507
