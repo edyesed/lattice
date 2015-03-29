@@ -79,7 +79,7 @@ compile_lattice-cell() {
     wget "http://go-diego-go.s3.amazonaws.com/${CONSUL_OBJECT_ID}" -O $GOBIN/consul
     chmod +x $GOBIN/consul
 
-    cp -av $LATTICE_PATH/lattice-cell/ $OUTPUT_DIR/
+    cp -av $LATTICE_PATH/cluster/cell/ $OUTPUT_DIR/
 }
 
 compile_coordinator() {
@@ -107,7 +107,7 @@ compile_coordinator() {
     wget "http://go-diego-go.s3.amazonaws.com/${CONSUL_OBJECT_ID}" -O $GOBIN/consul
     chmod +x $GOBIN/consul
 
-    cp -av $LATTICE_PATH/coordinator/ $OUTPUT_DIR/
+    cp -av $LATTICE_PATH/cluster/coordinator/ $OUTPUT_DIR/
 }
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]; then
@@ -134,7 +134,7 @@ rm -rf $OUTPUT_DIR/*
 rm -rf $GOPATH/pkg/*
 
 mkdir -pv $OUTPUT_DIR/common/
-cp -av $LATTICE_PATH/common/* $OUTPUT_DIR/common/
+cp -av $LATTICE_PATH/cluster/common/* $OUTPUT_DIR/common/
 
 cp -v $LATTICE_PATH/Version $OUTPUT_DIR/common/LATTICE_VERSION
 
