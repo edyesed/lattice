@@ -279,7 +279,7 @@ var _ = Describe("DockerAppRunner", func() {
 		})
 	})
 
-	Describe("CreateAppFromJson", func() {
+	Describe("CreateLrp", func() {
 
 		It("Creates an app from JSON", func() {
 			fakeReceptorClient.CreateDesiredLRPReturns(nil)
